@@ -288,8 +288,8 @@ ul.rows{list-style:none;margin:0;padding:0}
     return 'scheduled';
   }
 
-  var START=D('08:00'), tsec=START, speed=300, playing=true, lang='fr', query='', dragging=false;
-  try{var sl=localStorage.getItem('cdg-lang');if(sl&&T[sl])lang=sl;}catch(e){}
+  var START=D('08:00'), tsec=START, speed=300, playing=true, lang='en', query='', dragging=false;
+  try{var sl=localStorage.getItem('cdg-lang2');if(sl&&T[sl])lang=sl;}catch(e){}
 
   var $=function(id){return document.getElementById(id);};
   var lists={arr:$('arr'),dep:$('dep')};
@@ -420,7 +420,7 @@ ul.rows{list-style:none;margin:0;padding:0}
   document.querySelectorAll('#langs button').forEach(function(b){
     b.addEventListener('click',function(){
       lang=b.getAttribute('data-lang');
-      try{localStorage.setItem('cdg-lang',lang);}catch(e){}
+      try{localStorage.setItem('cdg-lang2',lang);}catch(e){}
       applyLang();
     });
   });
